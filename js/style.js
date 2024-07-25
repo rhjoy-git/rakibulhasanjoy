@@ -1,3 +1,13 @@
+document.addEventListener("DOMContentLoaded", function() {
+
+    var navbarToggler = document.querySelector(".navbar-toggler");
+    var hamburgericon = navbarToggler.querySelector("i");
+
+    navbarToggler.addEventListener("click", function(){
+        hamburgericon.classList.toggle("fa-bars");
+        hamburgericon.classList.toggle("fa-times");
+    });
+
 // visiblity screen change title will change <!--  -->
 document.addEventListener('visibilitychange',
     function () {
@@ -21,23 +31,25 @@ document.addEventListener("scroll", () => {
 
 // <!-- on scroll top btn end -->
 //<!-- ScrollSpy sart -->
-let links = document.querySelectorAll("#navbar li a");
-let section = document.querySelectorAll(".head-section");
+let links = document.querySelectorAll(".navbar-nav .nav-item .nav-link");
+let sections = document.querySelectorAll(".head-section");
+
 window.onscroll = () => {
-    section.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 65;
-        let height = sec.offsetHeight
+    let top = window.scrollY;
+    sections.forEach(sec => {
+        let offset = sec.offsetTop - 110;
+        let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
         if (top >= offset && top <= offset + height) {
             links.forEach(link => {
                 link.classList.remove('active');
-                document.querySelector('#navbar li a[href*=' + id + ']').classList.add('active');
             });
-        };
+            document.querySelector(`.navbar-nav .nav-item .nav-link[href*="${id}"]`).classList.add('active');
+        }
     });
 };
+
 //<!-- ScrollSpy end -->
 //<!--  smooth scrolling-->
 $('a[href*="#"]').on('click', function (e) {
@@ -78,3 +90,4 @@ let typed = new Typed(".typing-text", {
     backDelay: 300,
 });
 // <!-- typed js effect ends -->
+});

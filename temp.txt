@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Welcome to Rakibul Hasan Joy Portfolio. Full-Stack Web Developer and Blockchain Developer" />
+    <meta name="description" content="Welcome to Rakibul Hasan Joy Portfolio. Full-Stack Web Developer and Blockchain Developer" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <link id='favicon' rel="shortcut icon" href="img/favicon.png" type="img/x-png">
     <title>RH'Joy | portfolio</title>
@@ -16,27 +14,33 @@
 
 <body>
     <!-- ------------Header section start--------------- -->
-    <header class="header">
-        <nav class="navbar navbar-expand-lg">
-            <a href="#" class="navbar-brand"><i class="fa-brands fa-react"></i><span>RH'Joy</span></a>
+    <header id="header">
+        <a href="#" id="logo"><i class="fa-brands fa-react"></i>RH'Joy</a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#project">Work</a></li>
+                <li><a href="#exprience">Exprience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
 
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarContent"
-                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+        <div class="toggle-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
 
-            <div class="navbar-collapse ml-auto collapse" id="navbarContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#project">Work</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#exprience">Exprience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
+        <div class="dropdown-menu">
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#project">Work</a></li>
+            <li><a href="#exprience">Exprience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </div>
     </header>
     <!-- ------------Header section end--------------- -->
     <!-- ------------Hero section Start--------------- -->
@@ -48,19 +52,15 @@
             <h2 id="name">I'm Rakibul Hasan <span>Joy</span></h2>
             <h3 class="myknowledge">I Am Into <span class="typing-text"></span></h3>
 
-            <button id="hero-btn"><a href="#about">About Me</a> <span><i
-                        class="fa-solid fa-circle-down"></i></span></button>
+            <button id="hero-btn"><a href="#about">About Me</a> <span><i class="fa-solid fa-circle-down"></i></span></button>
 
             <div class="hero-social-icon">
                 <ul id="social-icon">
-                    <li><a target="_blank" href="https://www.linkedin.com/in/iamrakibulhasanjoy/"><i
-                                class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a target="_blank" href="https://www.linkedin.com/in/iamrakibulhasanjoy/"><i class="fa-brands fa-linkedin"></i></a></li>
                     <li><a target="_blank" href="https://github.com/rhjoy-git"><i class="fa-brands fa-github"></i></a>
                     </li>
-                    <li><a target="_blank" href="mailto: rakibulhasanjoy009@gmail.com"><i
-                                class="fa-solid fa-envelope"></i></a></li>
-                    <li><a target="_blank" href="https://www.facebook.com/iam.RakibulHasanJoy"><i
-                                class="fa-brands fa-facebook"></i></a></li>
+                    <li><a target="_blank" href="mailto: rakibulhasanjoy009@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/iam.RakibulHasanJoy"><i class="fa-brands fa-facebook"></i></a></li>
                     <li><a target="_blank" href="https://wa.me/+8801714532308"><i class="fa-brands fa-whatsapp"></i></a>
                     </li>
                 </ul>
@@ -106,14 +106,13 @@
                         </p>
                     </div>
                 </div>
-                <button class="resume-btn"><a href="./Rakibul Hasan Joy Resume.pdf">Resume <span><i
-                                class="fa-solid fa-angle-right"></i></span></a></button>
+                <button class="resume-btn"><a href="./Rakibul Hasan Joy Resume.pdf">Resume <span><i class="fa-solid fa-angle-right"></i></span></a></button>
             </div>
         </div>
     </section>
     <!-- ------------About me section end--------------- -->
     <!-- ------------Skills & abilities section Start--------------- -->
-    <div class="container skills head-section" id="skills">
+    <div class="skills head-section" id="skills">
         <h2 class="skills-title title"><i class="fa-solid fa-laptop-code"></i> Skills & <span>Abilites</span></h2>
 
         <div class="skill-box">
@@ -453,8 +452,7 @@
                     <label for="message"><i class="fa-solid fa-comment-dots"></i></label>
                 </div>
                 <div class="submit-btn">
-                    <button class="btn" type="submit">Submit <span><i
-                                class="fa-solid fa-paper-plane"></i></span></button>
+                    <button class="btn" type="submit">Submit <span><i class="fa-solid fa-paper-plane"></i></span></button>
                 </div>
             </form>
         </div>
@@ -474,11 +472,9 @@
                     <li> <span><i class="fa-solid fa-circle-chevron-right"></i></span> <a href="#home">Home</a></li>
                     <li> <span><i class="fa-solid fa-circle-chevron-right"></i></span> <a href="#about">About</a></li>
                     <li> <span><i class="fa-solid fa-circle-chevron-right"></i></span> <a href="#skills">Skills</a></li>
-                    <li> <span><i class="fa-solid fa-circle-chevron-right"></i></span> <a
-                            href="#education">Education</a></li>
+                    <li> <span><i class="fa-solid fa-circle-chevron-right"></i></span> <a href="#education">Education</a></li>
                     <li> <span><i class="fa-solid fa-circle-chevron-right"></i></span> <a href="#project">Work</a></li>
-                    <li> <span><i class="fa-solid fa-circle-chevron-right"></i></span> <a
-                            href="#exprience">Exprience</a></li>
+                    <li> <span><i class="fa-solid fa-circle-chevron-right"></i></span> <a href="#exprience">Exprience</a></li>
                 </ul>
             </div>
             <div class="contact-info">
@@ -490,23 +486,17 @@
                     </p>
                 </div>
                 <ul class="footer-social-icon" id="social-icon">
-                    <li><a target="_blank" href="https://www.linkedin.com/in/iamrakibulhasanjoy/"><i
-                                class="fa-brands fa-linkedin" style="color: #0077B5 ;"></i></a></li>
-                    <li><a target="_blank" href="https://github.com/rhjoy-git"><i class="fa-brands fa-github"
-                                style="color: #171515 ;"></i></a>
+                    <li><a target="_blank" href="https://www.linkedin.com/in/iamrakibulhasanjoy/"><i class="fa-brands fa-linkedin" style="color: #0077B5 ;"></i></a></li>
+                    <li><a target="_blank" href="https://github.com/rhjoy-git"><i class="fa-brands fa-github" style="color: #171515 ;"></i></a>
                     </li>
-                    <li><a target="_blank" href="mailto: rakibulhasanjoy009@gmail.com"><i class="fa-solid fa-envelope"
-                                style="color: #4267B2 ;"></i></a></li>
-                    <li><a target="_blank" href="https://www.facebook.com/iam.RakibulHasanJoy"><i
-                                class="fa-brands fa-facebook"></i></a></li>
-                    <li><a target="_blank" href="https://wa.me/+8801714532308"><i class="fa-brands fa-whatsapp-square"
-                                style="color: #25D366 ;"></i></a></li>
+                    <li><a target="_blank" href="mailto: rakibulhasanjoy009@gmail.com"><i class="fa-solid fa-envelope" style="color: #4267B2 ;"></i></a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/iam.RakibulHasanJoy"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a target="_blank" href="https://wa.me/+8801714532308"><i class="fa-brands fa-whatsapp-square" style="color: #25D366 ;"></i></a></li>
                 </ul>
             </div>
         </div>
         <div class="copy-right">
-            <p>Designed and Developed <span><i class="fa-solid fa-heart"></i></span> By [<a
-                    href="https://www.facebook.com/uinilab">UiniLab</a>]</p>
+            <p>Designed and Developed <span><i class="fa-solid fa-heart"></i></span> By [<a href="https://www.facebook.com/uinilab">UiniLab</a>]</p>
         </div>
     </footer>
     <!-- ------------Footer section End--------------- -->
@@ -520,24 +510,18 @@
     <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
 
     <!-- jquery cdn -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- particle.js links -->
     <script src="js/particles.min.js"></script>
     <script src="js/app.js"></script>
 
     <!-- typed.js cdn -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"
-        integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
 
     <script src="js/style.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/jquery.min.js"></script>
 </body>
 
 </html>
