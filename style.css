@@ -43,6 +43,24 @@
       width: 100%;
       padding: 30px 150px;
   }
+  .sec-title{
+    position: relative;
+  }
+  .sec-title::after{
+    content: '.';
+    position: absolute;
+    bottom: -11px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 12%;
+    height: 6px;
+    color: transparent;
+    background: #7303a7;
+    border-radius: 3px;
+
+
+  }
 
   @media only screen and (max-width: 975px) {
 
@@ -129,11 +147,13 @@
       color: #404145;
       font-weight: 600;
   }
+
   .navbar-nav .nav-link.active,
   .navbar-nav .nav-link:active,
-  .navbar-nav .nav-link:hover{
-    color: blue;
+  .navbar-nav .nav-link:hover {
+      color: blue;
   }
+
   .navbar-nav .nav-link:after {
       content: '';
       position: absolute;
@@ -478,26 +498,26 @@
   }
 
   .aboutme {
-      display: flex;
-      align-items: center;
+    justify-content: center;
+      align-items: flex-start;
       padding: 50px 0;
       border-bottom: 1px solid #000;
   }
 
-  .aboutme-content .me {
+  .aboutme .me-title {
       font-size: 26px;
       font-weight: 700;
       letter-spacing: 0.4px;
   }
 
-  .aboutme-content .pro {
+  .aboutme .pro {
       font-size: 14px;
       font-weight: 600;
       letter-spacing: 0.4px;
   }
 
-  .aboutme-content .des {
-      font-size: 14px;
+  .aboutme .des {
+      font-size: 1rem;
       word-spacing: 1px;
       font-weight: 500;
       color: #3c3c3c;
@@ -508,8 +528,7 @@
   .personal-info {
       display: flex;
       justify-content: space-between;
-      color: #000;
-      font-size: 14px;
+      color: #000;;
       font-weight: 500;
       letter-spacing: 0.5px;
       width: 90%;
@@ -551,7 +570,7 @@
   }
 
   .aboutme-img img {
-      width: 250px;
+      width: 350px;
   }
 
   /* <!-- ============ About responsive start ============ --> */
