@@ -391,7 +391,7 @@
   }
 
   #hero-img img {
-      width: 100%;
+      width: 55%;
       border-radius: 50%;
       box-shadow: 0 0 20px rgba(24, 64, 222, 0.5);
 
@@ -622,6 +622,10 @@
 
   /* <!-- ============ About responsive start ============ --> */
   @media only screen and (min-width: 1400px) {
+      #hero-img img {
+          width: 55%;
+      }
+
       .personal-info {
           font-size: 0.9rem;
       }
@@ -632,6 +636,10 @@
   }
 
   @media only screen and (min-width: 1200px) and (max-width: 1400px) {
+      #hero-img img {
+          width: 75%;
+      }
+
       .aboutme-img img {
           width: 75%;
       }
