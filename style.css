@@ -49,12 +49,12 @@
   .sec-title::after{
     content: '.';
     position: absolute;
-    bottom: -11px;
+    bottom: -10px;
     left: 0;
     right: 0;
     margin: auto;
-    width: 12%;
-    height: 6px;
+    width: 13rem;
+    height: 4px;
     color: transparent;
     background: #7303a7;
     border-radius: 3px;
@@ -185,6 +185,14 @@
 
       .navbar-nav li a {
           font-size: 1em;
+      }
+      .about,
+      .skills,
+      .education,
+      .project,
+      .exprience,
+      .contact {
+          padding: 50px 150px;
       }
   }
 
@@ -878,7 +886,6 @@
   /* project sec start  */
   .project {
       background: linear-gradient(to bottom, #000031, #00002c);
-      min-height: 100vh;
       margin: 0 auto;
   }
 
