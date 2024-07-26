@@ -1,12 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
-
-    var navbarToggler = document.querySelector(".navbar-toggler");
-    var hamburgericon = navbarToggler.querySelector("i");
+    // Navbar icon toggler in mobile screen
+    let navbarToggler = document.querySelector(".navbar-toggler");
+    let hamburgerIcon = navbarToggler.querySelector("i");
 
     navbarToggler.addEventListener("click", function () {
-        hamburgericon.classList.toggle("fa-bars");
-        hamburgericon.classList.toggle("fa-times");
+        hamburgerIcon.classList.toggle("fa-bars");
+        hamburgerIcon.classList.toggle("fa-times");
     });
+
+    let navLinks = document.querySelectorAll(".nav-link");
+    navLinks.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            let navbarShow = document.querySelector(".navbar-collapse.show");
+            if (navbarShow) {
+                navbarShow.classList.remove("show");
+                hamburgerIcon.className = "fa fa-bars";
+            }
+        });
+    });
+
 
     // visiblity screen change title will change <!--  -->
     document.addEventListener('visibilitychange',
@@ -81,6 +93,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     // Social icon activision end
 });
+
+
 // <!-- typed js effect starts -->
 let typed = new Typed(".typing-text", {
     strings: ["Frontend Development", "Web Design", "Web Development"],

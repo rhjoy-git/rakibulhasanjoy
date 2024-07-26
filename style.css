@@ -34,40 +34,38 @@
   }
 
   /* scroll bar end*/
-  .about,
   .skills,
   .education,
-  .project,
   .exprience,
   .contact {
       width: 100%;
       padding: 30px 150px;
   }
-  .sec-title{
-    position: relative;
+
+  .sec-title {
+      position: relative;
   }
-  .sec-title::after{
-    content: '.';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 13rem;
-    height: 4px;
-    color: transparent;
-    background: #7303a7;
-    border-radius: 3px;
+
+  .sec-title::after {
+      content: '.';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 13rem;
+      height: 4px;
+      color: transparent;
+      background: #7303a7;
+      border-radius: 3px;
 
 
   }
 
   @media only screen and (max-width: 975px) {
 
-      .about,
       .skills,
       .education,
-      .project,
       .exprience,
       .contact {
           padding: 30px;
@@ -81,7 +79,7 @@
   /* header section start */
   .navbar-brand {
       text-decoration: none;
-      font-size: 1.2em;
+      font-size: 1.5em !important;
       color: #404145;
       font-weight: 600;
   }
@@ -98,7 +96,7 @@
 
   .header {
       background: #FFFFFF;
-      padding: 18px 150px;
+      padding: 10px 150px;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
       position: sticky;
       top: 0;
@@ -143,7 +141,7 @@
       position: relative;
       display: inline-block;
       text-decoration: none;
-      font-size: 1em;
+      font-size: 1rem;
       color: #404145;
       font-weight: 600;
   }
@@ -175,10 +173,6 @@
 
   /* <!-- ============ header responsive start ============ --> */
   @media only screen and (max-width: 1400px) {
-      .header {
-          padding: 18px 150px;
-      }
-
       .navbar-brand {
           font-size: 1.2em;
       }
@@ -186,6 +180,7 @@
       .navbar-nav li a {
           font-size: 1em;
       }
+
       .about,
       .skills,
       .education,
@@ -193,6 +188,25 @@
       .exprience,
       .contact {
           padding: 50px 150px;
+      }
+  }
+
+  @media only screen and (min-width:992px) and (max-width: 1020px) {
+      .header {
+          padding: 10px;
+      }
+  }
+
+  @media only screen and (max-width: 768px) {
+
+      .contact,
+      .exprience,
+      .education {
+          padding: 50px;
+      }
+
+      #hero-img {
+          padding: 0;
       }
   }
 
@@ -461,7 +475,7 @@
       }
 
       #hero-img img {
-          width: 70%;
+          width: 50%;
           margin-left: 0rem;
       }
   }
@@ -506,13 +520,14 @@
   }
 
   .aboutme {
-    justify-content: center;
+      justify-content: center;
       align-items: flex-start;
       padding: 50px 0;
       border-bottom: 1px solid #000;
   }
 
-  .aboutme .me-title {
+
+  .aboutme .aboutme-content .me-title {
       font-size: 26px;
       font-weight: 700;
       letter-spacing: 0.4px;
@@ -522,10 +537,11 @@
       font-size: 14px;
       font-weight: 600;
       letter-spacing: 0.4px;
+      color: #FF7B00;
   }
 
   .aboutme .des {
-      font-size: 1rem;
+      font-size: 0.92rem;
       word-spacing: 1px;
       font-weight: 500;
       color: #3c3c3c;
@@ -534,17 +550,14 @@
   }
 
   .personal-info {
-      display: flex;
-      justify-content: space-between;
-      color: #000;;
+      font-size: 0.92rem;
+      color: #000;
       font-weight: 500;
       letter-spacing: 0.5px;
-      width: 90%;
   }
 
   .personal-info span {
-      font-size: 14px;
-      color: #2b02e3;
+      color: #ffae00;
       font-weight: 500;
   }
 
@@ -573,7 +586,7 @@
   }
 
   .resume-btn:hover span {
-      color: #FF7B00;
+      color: #ffae00;
       transform: translateX(10px);
   }
 
@@ -582,28 +595,77 @@
   }
 
   /* <!-- ============ About responsive start ============ --> */
-  @media only screen and (max-width: 1400px) {
+  @media only screen and (min-width: 1400px) {
+      .personal-info {
+          font-size: 0.9rem;
+      }
+  }
+
+  @media only screen and (min-width: 1200px) and (max-width: 1400px) {
       .aboutme-content .pro {
           font-size: 1em;
       }
 
       .personal-info {
-          display: block;
+          font-size: 0.85rem;
       }
 
-      .personal-info div:nth-child(1) {
-          margin-bottom: 20px;
+      .home div.row {
+          width: auto !important;
+      }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1200px) {
+      .aboutme-content {
+          max-height: 450px;
+          overflow-y: auto;
+          padding: 15px;
+          background: linear-gradient(white, white), linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
+          background-clip: padding-box, border-box;
+          background-origin: padding-box, border-box;
+          background-repeat: no-repeat;
+          animation: fadeIn 1s ease-in-out;
+      }
+
+      .aboutme-content::-webkit-scrollbar {
+          width: 10px;
+      }
+
+      .aboutme-content::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 5px;
+      }
+
+      .aboutme-content::-webkit-scrollbar-thumb:hover {
+          background: #555;
+      }
+
+      .personal-info {
+          font-size: 0.9rem;
+          letter-spacing: 1px;
+      }
+
+      .me-title,
+      .pro,
+      .des,
+      .personal-info {
+          margin-bottom: 15px;
+      }
+
+      @keyframes fadeIn {
+          from {
+              opacity: 0;
+          }
+
+          to {
+              opacity: 1;
+          }
       }
   }
 
   @media only screen and (max-width: 768px) {
       .about {
           margin-top: 10px;
-      }
-
-      .aboutme {
-          flex-direction: column;
-          padding: 30px 0;
       }
 
       .aboutme-img {
@@ -617,13 +679,19 @@
       }
   }
 
+  @media only screen and (min-width: 250px) and (max-width: 992px) {
+      .aboutme {
+          padding: 30px 0;
+      }
+
+      .aboutme-img {
+          margin-bottom: 2rem;
+      }
+  }
+
   @media only screen and (max-width: 570px) {
       .aboutme {
           padding: 10px 0 30px 0;
-      }
-
-      .personal-info {
-          width: 100%;
       }
 
       .resume-btn {
@@ -1674,6 +1742,10 @@
   @media only screen and (max-width: 570px) {
       .qucick-link {
           width: 100%;
+      }
+
+      .contact {
+          padding: 30px;
       }
 
       .contact-info {
