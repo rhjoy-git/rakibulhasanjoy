@@ -467,38 +467,48 @@
     <!-- ---------------- Exprience section ends ---------------- -->
 
     <!-- ------------Contact section Start--------------- -->
-    <section class="contact head-section" id="contact">
-        <h2 class="sec-title title"><i class="fa-solid fa-headset"></i> Get In <span>Touch</span></h2>
+<section class="contact head-section" id="contact">
+    <h2 class="sec-title title"><i class="fa-solid fa-headset"></i> Get In <span>Touch</span></h2>
 
-        <div class="contact-form mt-lg-5">
-            <div class="contact-img col">
-                <img draggable="false" src="img/mail-img.png" alt="">
-            </div>
-            <form class="col form">
-                <div class="input-grp">
-                    <input type="text" id="usrn" placeholder="Name" required>
-                    <label for="usrn"><i class="fa-solid fa-user-large"></i></label>
-                </div>
-                <div class="input-grp">
-                    <input type="text" id="email" placeholder="Email" required>
-                    <label for="email"><i class="fa-solid fa-envelope"></i></label>
-                </div>
-                <div class="input-grp">
-                    <input type="text" id="number" placeholder="Phone" required>
-                    <label for="number"><i class="fa-solid fa-phone"></i></label>
-                </div>
-                <div class="input-grp">
-                    <textarea name="message" id="message" placeholder="Message" rows="5" required></textarea>
-                    <label for="message"><i class="fa-solid fa-comment-dots"></i></label>
-                </div>
-                <div class="submit-btn">
-                    <button class="btn" type="submit">Submit <span><i
-                                class="fa-solid fa-paper-plane"></i></span></button>
-                </div>
-            </form>
+    <div class="contact-form mt-lg-5">
+        <div class="contact-img col">
+            <img draggable="false" src="img/mail-img.png" alt="">
         </div>
-    </section>
-    <!-- ------------Contact section End--------------- -->
+        <form action="https://formsubmit.co/rakibul108joy@gmail.com" method="POST" class="col form" id="contactForm">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New Mail Check Now!">
+            <div class="input-grp">
+                <input type="text" name="name" id="usrn" placeholder="Name" required>
+                <label for="usrn"><i class="fa-solid fa-user-large"></i></label>
+            </div>
+            <div class="input-grp">
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <label for="email"><i class="fa-solid fa-envelope"></i></label>
+            </div>
+            <div class="input-grp">
+                <input type="text" name="phone" id="number" placeholder="Phone" required>
+                <label for="number"><i class="fa-solid fa-phone"></i></label>
+            </div>
+            <div class="input-grp">
+                <textarea name="message" id="message" placeholder="Message" rows="5" required></textarea>
+                <label for="message"><i class="fa-solid fa-comment-dots"></i></label>
+            </div>
+            <div class="submit-btn">
+                <button class="btn" type="submit">Submit <span><i class="fa-solid fa-paper-plane"></i></span></button>
+            </div>
+        </form>
+    </div>
+</section>
+<!-- ------------Contact section End--------------- -->
+
+<!-- Popup Modal -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close">&times;</span>
+        <p>Sent Successfully!</p>
+    </div>
+</div>
+
     <!-- ------------Footer section Start--------------- -->
     <footer>
         <div class="footer-sec mt-lg-4">

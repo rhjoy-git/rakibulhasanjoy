@@ -93,8 +93,57 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     // Social icon activision end
 });
+// ===================    POP uo =======
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("contactForm");
+    const popup = document.getElementById("popup");
+    const closeBtn = document.querySelector(".close");
 
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
 
+        // Check form validity
+        if (!form.checkValidity()) {
+            form.reportValidity(); // Show validation errors
+            return;
+        }
+
+        // Gather form data
+        const formData = new FormData(form);
+
+        // Send form data using Fetch API
+        fetch(form.action, {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(result => {
+            if (result.success) {
+                // Show the popup
+                popup.style.display = "flex";
+            } else {
+                alert("Error: " + result.message);
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
+    });
+
+    // Close the popup when the close button is clicked
+    closeBtn.addEventListener("click", function() {
+        popup.style.display = "none";
+    });
+
+    // Close the popup when clicking outside of the popup content
+    window.addEventListener("click", function(event) {
+        if (event.target == popup) {
+            popup.style.display = "none";
+        }
+    });
+});
+
+// =================  POP up =========
 // <!-- typed js effect starts -->
 let typed = new Typed(".typing-text", {
     strings: ["Frontend Development", "Web Design", "Web Development"],
