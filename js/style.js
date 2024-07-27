@@ -92,9 +92,9 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     });
     // Social icon activision end
-});
+
 // ===================    POP uo =======
-document.addEventListener("DOMContentLoaded", function() {
+
     const form = document.getElementById("contactForm");
     const popup = document.getElementById("popup");
     const closeBtn = document.querySelector(".close");
