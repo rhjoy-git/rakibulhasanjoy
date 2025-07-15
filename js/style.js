@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // =================  POP up =========
 // <!-- typed js effect starts -->
 let typed = new Typed(".typing-text", {
-    strings: ["Frontend Development", "Web Design", "Web Development"],
+    strings: ["Frontend Development", "Web Design", "Web Development", "Full Stack Development"],
     loop: true,
     typeSpeed: 80,
     backSpeed: 50,
